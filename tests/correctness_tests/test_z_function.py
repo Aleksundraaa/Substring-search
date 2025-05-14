@@ -1,8 +1,6 @@
 import unittest
-
-from fontTools.merge.util import equal
-
 from algorithms.z_function_algorithm import ZFunctionSearch
+
 
 class TestZFunction(unittest.TestCase):
 
@@ -32,7 +30,7 @@ class TestZFunction(unittest.TestCase):
 
     def test_pattern_not_found(self):
         text = 'hello world'
-        pattern  = 'hallo'
+        pattern = 'hallo'
 
         result = self.z_function.z_function_search(text, pattern)
         self.assertEqual(result, -1)
@@ -86,5 +84,6 @@ class TestZFunction(unittest.TestCase):
         result = self.z_function.z_function_search(text, pattern)
         self.assertEqual(result, 3)
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     unittest.main()

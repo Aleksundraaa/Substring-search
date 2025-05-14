@@ -1,6 +1,7 @@
 import unittest
 from algorithms.brute_force_algorithm import BruteForceSearch
 
+
 class TestBruteForceSearch(unittest.TestCase):
 
     def setUp(self):
@@ -71,6 +72,7 @@ class TestBruteForceSearch(unittest.TestCase):
         pattern = "123"
         result = self.brute_force.brute_force_search(text, pattern)
         self.assertEqual(result, 3)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,6 +1,7 @@
 import unittest
 from algorithms.knuth_morris_pratt import KMPSearch
 
+
 class TestKMP(unittest.TestCase):
     def setUp(self):
         self.kmp = KMPSearch()
@@ -28,7 +29,7 @@ class TestKMP(unittest.TestCase):
 
     def test_pattern_not_found(self):
         text = 'hello world'
-        pattern  = 'hallo'
+        pattern = 'hallo'
 
         result = self.kmp.kmp_search(text, pattern)
         self.assertEqual(result, -1)
@@ -81,6 +82,7 @@ class TestKMP(unittest.TestCase):
 
         result = self.kmp.kmp_search(text, pattern)
         self.assertEqual(result, 3)
+
 
 if __name__ == '__main__':
     unittest.main()

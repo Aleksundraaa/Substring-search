@@ -1,6 +1,7 @@
 import unittest
 from algorithms.aho_corasick_algorithm import AhoCorasickSearch
 
+
 class TestAhoCorasick(unittest.TestCase):
     def setUp(self):
         self.aho_corasick = AhoCorasickSearch(["hello", "world", "lo", "abc", "123", " "])
@@ -70,6 +71,7 @@ class TestAhoCorasick(unittest.TestCase):
         pattern = "123"
         result = self.aho_corasick.aho_corasick_search(text, pattern)
         self.assertEqual(result, 3)
+
 
 if __name__ == '__main__':
     unittest.main()

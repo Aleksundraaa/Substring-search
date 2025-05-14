@@ -6,6 +6,7 @@ from algorithms.knuth_morris_pratt import KMPSearch
 from algorithms.aho_corasick_algorithm import AhoCorasickSearch
 from algorithms.z_function_algorithm import ZFunctionSearch
 
+
 class MemoryTester:
     def __init__(self, sizes, pattern):
         self._sizes = sizes
@@ -33,17 +34,23 @@ class MemoryTester:
                     with open(file_path, 'r') as file:
                         text = file.read()
 
-                    brute_force_memory = self._measure_memory(self._brute_force.brute_force_search, text, self._pattern)
+                    brute_force_memory = self._measure_memory(
+                        self._brute_force.brute_force_search, text, self._pattern
+                    )
                     self._memory_result.append((data_type, size, 'Brute-Force', brute_force_memory))
 
                     hash_type = 'polynomial'
-                    rabin_karp_memory = self._measure_memory(self._rabin_karp.rabin_karp_search, text, self._pattern, hash_type)
+                    rabin_karp_memory = self._measure_memory(
+                        self._rabin_karp.rabin_karp_search, text, self._pattern, hash_type
+                    )
                     self._memory_result.append((data_type, size, 'Rabin-Karp', rabin_karp_memory))
 
                     kmp_memory = self._measure_memory(self._kmp.kmp_search, text, self._pattern)
                     self._memory_result.append((data_type, size, 'KMP', kmp_memory))
 
-                    aho_corasick_memory = self._measure_memory(self._aho_corasick.aho_corasick_search, text, self._pattern)
+                    aho_corasick_memory = self._measure_memory(
+                        self._aho_corasick.aho_corasick_search, text, self._pattern
+                    )
                     self._memory_result.append((data_type, size, 'Aho-Corasick', aho_corasick_memory))
 
                     z_function_memory = self._measure_memory(self._z_function.z_function_search, text, self._pattern)

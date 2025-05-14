@@ -6,6 +6,7 @@ from algorithms.knuth_morris_pratt import KMPSearch
 from algorithms.aho_corasick_algorithm import AhoCorasickSearch
 from algorithms.z_function_algorithm import ZFunctionSearch
 
+
 class TimeTester:
     def __init__(self, sizes, pattern):
         self._sizes = sizes
@@ -55,7 +56,5 @@ class TimeTester:
         with open(file_path, 'w', newline='') as file:
             file.write('Data Type     Size(byte)    Algorithm         Execution Time(ms)\n')
             for result in self._time_results:
-                line = f'{result[0]:<13} {result[1]:<13} {result[2]:<17} {result[3]*1000}\n'
+                line = f'{result[0]:<13} {result[1]:<13} {result[2]:<17} {result[3] * 1000}\n'
                 file.write(line)
-
-

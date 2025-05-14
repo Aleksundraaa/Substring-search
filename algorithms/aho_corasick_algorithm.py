@@ -14,8 +14,7 @@ class AhoCorasickSearch:
     def _create_forest(patterns):
         '''
         Создаем дерево узлов для заданных шаблонов.
-
-        получаем root - корневой узел дерева
+        Получаем root - корневой узел дерева
         '''
         root = Node()
         for path in patterns:
